@@ -1,0 +1,848 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #111827;
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+}
+
+.emergency-container {
+    width: 100%;
+    max-width: 850px;
+    min-height: 650px;
+    background:
+        radial-gradient(circle at center, #4a111b, #151923 75%);
+    border: 2px solid #ef3340;
+    border-radius: 22px;
+    overflow: hidden;
+    box-shadow: 0 0 35px rgba(239, 35, 60, 0.25);
+}
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 30px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.brand-icon {
+    font-size: 32px;
+}
+
+.brand h3 {
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
+.brand p {
+    font-size: 12px;
+    color: #aaa;
+    margin-top: 4px;
+}
+
+.status {
+    background: #e52435;
+    padding: 8px 18px;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.main-content {
+    text-align: center;
+    padding: 35px 30px;
+}
+
+.siren {
+    font-size: 75px;
+    margin-bottom: 15px;
+    animation: pulse 1s infinite alternate;
+}
+
+.alert-title {
+    display: inline-block;
+    background: #bd182b;
+    border: 2px solid #ff4655;
+    box-shadow: 0 0 25px rgba(255,40,60,.5);
+    border-radius: 15px;
+    padding: 18px 25px;
+    margin-bottom: 25px;
+}
+
+.alert-title h1 {
+    font-size: 30px;
+}
+
+.main-content h2 {
+    font-size: 28px;
+    margin-bottom: 18px;
+}
+
+.description {
+    max-width: 550px;
+    margin: auto;
+    line-height: 1.7;
+    color: #ddd;
+}
+
+.highlight {
+    color: #ffd166;
+    font-weight: bold;
+    margin-top: 20px;
+    line-height: 1.6;
+}
+
+.main-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 35px;
+    padding: 17px 40px;
+    border-radius: 50px;
+    background: linear-gradient(135deg, #ff3348, #b80d25);
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    box-shadow: 0 5px 20px rgba(255,30,50,.3);
+    transition: .3s;
+}
+
+.main-button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(255,30,50,.5);
+}
+
+.footer-note {
+    color: #aaa;
+    font-size: 12px;
+    margin-top: 30px;
+}
+
+@keyframes pulse {
+    from {
+        transform: scale(1);
+        filter: brightness(1);
+    }
+    to {
+        transform: scale(1.12);
+        filter: brightness(1.5);
+    }
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+
+    body {
+        padding: 12px;
+    }
+
+    .emergency-container {
+        min-height: auto;
+        border-radius: 16px;
+    }
+
+    .topbar {
+        padding: 18px 15px;
+    }
+
+    .brand h3 {
+        font-size: 12px;
+    }
+
+    .brand p {
+        font-size: 10px;
+    }
+
+    .brand-icon {
+        font-size: 26px;
+    }
+
+    .status {
+        padding: 7px 11px;
+        font-size: 10px;
+    }
+
+    .main-content {
+        padding: 35px 17px;
+    }
+
+    .siren {
+        font-size: 60px;
+    }
+
+    .alert-title {
+        padding: 15px 12px;
+    }
+
+    .alert-title h1 {
+        font-size: 21px;
+    }
+
+    .main-content h2 {
+        font-size: 23px;
+    }
+
+    .description {
+        font-size: 14px;
+    }
+
+    .highlight {
+        font-size: 14px;
+    }
+
+    .main-button {
+        width: 100%;
+        padding: 17px 12px;
+        font-size: 14px;
+    }
+
+    .footer-note {
+        line-height: 1.6;
+    }
+}
+
+
+/* =================================
+   HALAMAN KEDUA - PENGUMUMAN
+================================= */
+
+.announcement-container {
+    width: 100%;
+    max-width: 850px;
+    margin: auto;
+    background: radial-gradient(
+        circle at top right,
+        #263b54,
+        #111827 70%
+    );
+    border: 2px solid #8ca7c9;
+    border-radius: 22px;
+    overflow: hidden;
+    box-shadow: 0 0 35px rgba(70, 150, 255, 0.15);
+}
+
+.announcement-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 30px;
+    border-bottom: 1px solid rgba(255,255,255,.1);
+}
+
+.announcement-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.announcement-brand > span {
+    font-size: 30px;
+}
+
+.announcement-brand h3 {
+    font-size: 14px;
+}
+
+.announcement-brand p {
+    color: #94a3b8;
+    font-size: 11px;
+    margin-top: 5px;
+}
+
+.breaking-badge {
+    background: #ffd166;
+    color: #171717;
+    padding: 9px 15px;
+    border-radius: 30px;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.announcement-content {
+    padding: 30px 35px;
+    text-align: center;
+}
+
+.clock-card {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    background: #202d40;
+    border: 1px solid #506985;
+    border-radius: 12px;
+    padding: 12px 25px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.clock-icon {
+    font-size: 35px;
+}
+
+.clock-card small {
+    font-size: 10px;
+    color: #94a3b8;
+}
+
+.clock-card h2 {
+    font-size: 25px;
+    color: #ff5c65;
+    letter-spacing: 2px;
+}
+
+.funny-illustration {
+    font-size: 65px;
+    padding: 20px;
+    animation: running 1s infinite alternate;
+}
+
+.headline {
+    margin: 10px 0 20px;
+}
+
+.headline-small {
+    display: block;
+    color: #ffd166;
+    font-size: 28px;
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+
+.headline h1 {
+    font-size: clamp(38px, 7vw, 65px);
+    font-weight: 900;
+    font-style: italic;
+    line-height: 1.1;
+    color: white;
+    text-shadow: 3px 4px 0 #b52b3a;
+}
+
+.yellow-banner {
+    display: inline-block;
+    background: #ffd166;
+    color: #151923;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-weight: 900;
+    font-size: 18px;
+    transform: rotate(-1deg);
+    margin: 15px 0 20px;
+}
+
+.announcement-description {
+    max-width: 570px;
+    margin: 0 auto 25px;
+    color: #d5dce8;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.analysis-card {
+    max-width: 600px;
+    margin: 25px auto;
+    padding: 20px;
+    text-align: left;
+    background: #202e42;
+    border: 1px solid #54718f;
+    border-radius: 14px;
+}
+
+.analysis-card h3 {
+    font-size: 15px;
+    margin-bottom: 18px;
+}
+
+.analysis-item {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 9px 0;
+    border-bottom: 1px solid rgba(255,255,255,.08);
+    font-size: 13px;
+}
+
+.analysis-item:last-child {
+    border-bottom: none;
+}
+
+.analysis-item strong {
+    color: #ffd166;
+    text-align: right;
+}
+
+.home-button {
+    width: 100%;
+    max-width: 450px;
+    padding: 17px;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(135deg, #22c55e, #087c43);
+    color: white;
+    font-size: 17px;
+    font-weight: 900;
+    cursor: pointer;
+    box-shadow: 0 5px 20px rgba(34,197,94,.25);
+    transition: .3s;
+}
+
+.home-button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(34,197,94,.4);
+}
+
+.footer-announcement {
+    color: #aab5c5;
+    font-size: 12px;
+    margin-top: 25px;
+    line-height: 1.6;
+}
+
+.back-link {
+    margin-top: 25px;
+}
+
+.back-link a {
+    color: #94b8e8;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+@keyframes running {
+    from {
+        transform: translateX(-8px) rotate(-3deg);
+    }
+    to {
+        transform: translateX(8px) rotate(3deg);
+    }
+}
+
+/* MOBILE HALAMAN KEDUA */
+@media (max-width: 600px) {
+
+    .announcement-container {
+        border-radius: 16px;
+    }
+
+    .announcement-header {
+        padding: 18px 15px;
+        gap: 10px;
+    }
+
+    .announcement-brand h3 {
+        font-size: 11px;
+    }
+
+    .announcement-brand p {
+        font-size: 9px;
+    }
+
+    .announcement-brand > span {
+        font-size: 24px;
+    }
+
+    .breaking-badge {
+        font-size: 9px;
+        padding: 8px 10px;
+    }
+
+    .announcement-content {
+        padding: 25px 17px;
+    }
+
+    .clock-card {
+        padding: 10px 20px;
+    }
+
+    .funny-illustration {
+        font-size: 48px;
+    }
+
+    .headline-small {
+        font-size: 23px;
+    }
+
+    .headline h1 {
+        font-size: 39px;
+    }
+
+    .yellow-banner {
+        font-size: 13px;
+        padding: 11px 15px;
+    }
+
+    .announcement-description {
+        font-size: 13px;
+    }
+
+    .analysis-card {
+        padding: 15px;
+    }
+
+    .analysis-card h3 {
+        font-size: 13px;
+    }
+
+    .analysis-item {
+        font-size: 11px;
+    }
+
+    .home-button {
+        font-size: 14px;
+        padding: 16px 10px;
+    }
+}
+
+
+/* =====================================
+   CUSTOM POPUP - PRANK KEPULANGAN
+===================================== */
+
+.prank-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+
+    background: rgba(5, 12, 24, 0.85);
+    backdrop-filter: blur(9px);
+
+    animation: overlayAppear .3s ease;
+}
+
+.prank-overlay[hidden] {
+    display: none;
+}
+
+.prank-modal {
+    position: relative;
+    width: 100%;
+    max-width: 490px;
+
+    padding: 30px;
+
+    text-align: center;
+
+    background: linear-gradient(
+        145deg,
+        #24364d,
+        #111c2d
+    );
+
+    border: 1px solid #607b9b;
+    border-radius: 24px;
+
+    box-shadow: 0 25px 80px rgba(0,0,0,.5);
+
+    animation: modalAppear .45s cubic-bezier(.2,.8,.3,1);
+}
+
+/* CLOSE BUTTON */
+
+.close-popup {
+    position: absolute;
+    top: 15px;
+    right: 17px;
+
+    width: 35px;
+    height: 35px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: rgba(255,255,255,.1);
+    color: white;
+
+    font-size: 24px;
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+.close-popup:hover {
+    background: #ef3340;
+    transform: rotate(90deg);
+}
+
+/* LABEL */
+
+.popup-label {
+    display: inline-block;
+
+    padding: 9px 16px;
+
+    background: rgba(34,197,94,.13);
+    border: 1px solid rgba(34,197,94,.4);
+
+    color: #4ade80;
+
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1px;
+
+    border-radius: 30px;
+}
+
+/* MONKEY */
+
+.monkey-container {
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 22px auto 15px;
+
+    width: 130px;
+    height: 130px;
+
+    background: radial-gradient(
+        circle,
+        #415a77,
+        #24364d 70%
+    );
+
+    border-radius: 50%;
+}
+
+.monkey-emoji {
+    font-size: 76px;
+
+    animation: monkeyBounce 1.5s ease-in-out infinite;
+}
+
+.monkey-sparkle {
+    position: absolute;
+    font-size: 24px;
+}
+
+.sparkle-one {
+    top: 5px;
+    right: 0;
+}
+
+.sparkle-two {
+    bottom: 10px;
+    left: 0;
+}
+
+/* HEADING */
+
+.popup-heading span {
+    color: #ffd166;
+    font-size: 22px;
+    font-weight: 900;
+}
+
+.popup-heading h2 {
+    color: white;
+    font-size: 27px;
+    line-height: 1.25;
+    margin-top: 10px;
+}
+
+/* DESCRIPTION */
+
+.popup-description {
+    color: #cbd5e1;
+    font-size: 14px;
+    line-height: 1.7;
+
+    margin: 17px 0 22px;
+}
+
+/* STATUS */
+
+.popup-status {
+    background: rgba(10,20,35,.65);
+
+    padding: 15px 17px;
+
+    border: 1px solid rgba(148,163,184,.2);
+    border-radius: 14px;
+
+    text-align: left;
+}
+
+.status-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 12px 0;
+
+    border-bottom: 1px solid rgba(255,255,255,.08);
+    font-size: 12px;
+}
+
+.status-row:last-child {
+    border-bottom: none;
+}
+
+.status-row span {
+    color: #cbd5e1;
+}
+
+.status-row strong {
+    color: #ffd166;
+    text-align: right;
+    font-size: 11px;
+}
+
+/* FUNNY MESSAGE */
+
+.popup-message {
+    margin: 20px 0;
+
+    color: #ffd166;
+    font-size: 13px;
+    font-style: italic;
+    line-height: 1.6;
+}
+
+/* FINISH BUTTON */
+
+.popup-finish {
+    width: 100%;
+
+    padding: 16px;
+
+    border: none;
+    border-radius: 50px;
+
+    background: linear-gradient(
+        135deg,
+        #22c55e,
+        #087c43
+    );
+
+    color: white;
+
+    font-size: 14px;
+    font-weight: 900;
+
+    cursor: pointer;
+    transition: .3s;
+}
+
+.popup-finish:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(34,197,94,.3);
+}
+
+.popup-footer {
+    color: #8493a8;
+    font-size: 10px;
+    margin-top: 18px;
+}
+
+/* ANIMATIONS */
+
+@keyframes overlayAppear {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes modalAppear {
+    from {
+        opacity: 0;
+        transform: translateY(35px) scale(.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes monkeyBounce {
+    0%, 100% {
+        transform: translateY(0) rotate(-5deg);
+    }
+
+    50% {
+        transform: translateY(-12px) rotate(5deg);
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .prank-overlay {
+        padding: 14px;
+    }
+
+    .prank-modal {
+        padding: 25px 19px;
+        border-radius: 20px;
+        max-height: 90vh;
+        overflow-y: auto;
+    }
+
+    .monkey-container {
+        width: 105px;
+        height: 105px;
+        margin: 18px auto 14px;
+    }
+
+    .monkey-emoji {
+        font-size: 63px;
+    }
+
+    .popup-heading span {
+        font-size: 19px;
+    }
+
+    .popup-heading h2 {
+        font-size: 23px;
+    }
+
+    .popup-description {
+        font-size: 13px;
+    }
+
+    .status-row {
+        font-size: 11px;
+    }
+
+    .status-row strong {
+        font-size: 10px;
+    }
+
+    .popup-finish {
+        padding: 15px 10px;
+        font-size: 13px;
+    }
+
+    .popup-footer {
+        font-size: 9px;
+        line-height: 1.5;
+    }
+}
